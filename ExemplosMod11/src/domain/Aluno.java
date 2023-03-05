@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 public class Aluno implements Comparable<Aluno>{
 
     private String nome;
@@ -67,6 +69,19 @@ public class Aluno implements Comparable<Aluno>{
 
    @Override
     public int compareTo(Aluno aluno) {
-        return this.nome.compareTo(aluno.getNome());
+       return this.nome.compareTo(aluno.getNome());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        return Double.compare(aluno.nota, nota) == 0 && Objects.equals(nome, aluno.nome) && Objects.equals(curso, aluno.curso) && Objects.equals(sala, aluno.sala);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, curso, nota, sala);
     }
 }

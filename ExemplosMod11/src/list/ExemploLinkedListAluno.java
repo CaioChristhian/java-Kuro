@@ -1,11 +1,13 @@
+package list;
+
 import domain.Aluno;
 import domain.ComparaNotaAluno;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
-public class ExemploArrayListAluno {
+public class ExemploLinkedListAluno {
     public static void main(String args[]) {
         exemploListaSimplesOrdenadaComparatorAluno();
         exemploListaSimplesOrdenadaClasseExterna();
@@ -13,7 +15,7 @@ public class ExemploArrayListAluno {
 
     private static void exemploListaSimplesOrdenadaClasseExterna() {
         System.out.println("**** exemploListaSimplesOrdenadaClasseExterna ****");
-        List<Aluno> lista = new ArrayList<Aluno>();
+        List<Aluno> lista = new LinkedList<Aluno>();
 
         Aluno a = new Aluno("Kuro", "Java", 8);
         Aluno b = new Aluno("Akaito", "Javascript", 6);
@@ -29,7 +31,7 @@ public class ExemploArrayListAluno {
 
     private static void exemploListaSimplesOrdenadaComparatorAluno() {
         System.out.println("**** exemploListaSimplesOrdenadaComparatorAluno ****");
-        List<Aluno> lista = new ArrayList<Aluno>();
+        List<Aluno> lista = new LinkedList<Aluno>();
 
         Aluno a = new Aluno("Kuro", "Java", 8);
         Aluno b = new Aluno("Akaito", "Javascript", 6);
@@ -48,4 +50,7 @@ public class ExemploArrayListAluno {
 
         System.out.println("");
     }
+
 }
+
+
